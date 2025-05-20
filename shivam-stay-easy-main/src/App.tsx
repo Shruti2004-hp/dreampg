@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -10,6 +9,8 @@ import PGInfo from "./pages/PGInfo";
 import Rooms from "./pages/Rooms";
 import Contact from "./pages/Contact";
 import Admin from "./pages/Admin";
+import Login from "./pages/LoginPage";
+import Register from "./pages/Register";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,18 @@ const App = () => (
           <Route path="/rooms" element={<Rooms />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          {/* Add other routes here */}
+          {/* <Route path="/register" element={<Register />} /> */}
+          {/* <Route path="/forgot-password" element={<ForgotPassword />} /> */}
+          {/* <Route path="/reset-password/:token" element={<ResetPassword />} /> */}
+          {/* <Route path="/profile" element={<Profile />} /> */}
+          {/* <Route path="/settings" element={<Settings />} /> */}
+          {/* <Route path="/billing" element={<Billing />} /> */}
+          {/* <Route path="/notifications" element={<Notifications />} /> */}
+          {/* <Route path="/terms" element={<Terms />} /> */}
+          {/* <Route path="/privacy" element={<Privacy />} /> */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
